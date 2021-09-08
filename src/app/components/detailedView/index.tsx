@@ -50,30 +50,30 @@ export class DetailedView extends React.Component {
           <div className="ms-Grid" dir="ltr">
             <div className="ms-Grid-row">
               <div className="ms-Grid-col ms-sm12 ms-lg6 ms-xl4">
-                <img alt="poster" src={selectedMovie[0].Poster} width="100%" />
+                <img alt="poster" src={selectedMovie[0]?.Poster} width="100%" />
               </div>
               <div className="ms-Grid-col ms-sm12 ms-lg6 ms-xl8">
-                <Text>{this.getListingType(selectedMovie[0].listingType)}</Text>
+                <Text>{this.getListingType(selectedMovie[0]?.listingType)}</Text>
                 {" at "}
-                <Text>{capitalizeFirstLetter(selectedMovie[0].Location)}</Text>
+                <Text>{capitalizeFirstLetter(selectedMovie[0]?.Location)}</Text>
                 <div className="movieTitle">
-                  <h3>{selectedMovie[0].Title}</h3>
+                  <h3>{selectedMovie[0]?.Title}</h3>
                 </div>
                 <Text>
                   {"Language: " +
-                    capitalizeFirstLetter(selectedMovie[0].Language)}
+                    capitalizeFirstLetter(selectedMovie[0]?.Language)}
                 </Text>
                 <div>
-                  <Text>{"IMDB Rating: " + selectedMovie[0].imdbRating}</Text>
+                  <Text>{"IMDB Rating: " + selectedMovie[0]?.imdbRating}</Text>
                 </div>
                 <Separator>Plot</Separator>
-                <h4>{selectedMovie[0].Plot}</h4>
+                <h4>{selectedMovie[0]?.Plot}</h4>
                 <Separator />
                 <Text>
                   {"Watch it now with " +
-                    selectedMovie[0].SoundEffects[0] +
+                    selectedMovie[0]?.SoundEffects[0] +
                     " and " +
-                    selectedMovie[0].SoundEffects[0] +
+                    selectedMovie[0]?.SoundEffects[0] +
                     " sound effects"}
                 </Text>
                 <ImdbButton id={this.movieId} />
@@ -86,21 +86,21 @@ export class DetailedView extends React.Component {
               <div className="ms-Grid-col ms-sm12 ms-lg4">
                 <img
                   alt="poster"
-                  src={selectedMovie[0].Stills[0]}
+                  src={selectedMovie[0]?.Stills[0]}
                   width="100%"
                 />
               </div>
               <div className="ms-Grid-col ms-sm12 ms-lg4">
                 <img
                   alt="poster"
-                  src={selectedMovie[0].Stills[1]}
+                  src={selectedMovie[0]?.Stills[1]}
                   width="100%"
                 />
               </div>
               <div className="ms-Grid-col ms-sm12 ms-lg4">
                 <img
                   alt="poster"
-                  src={selectedMovie[0].Stills[2]}
+                  src={selectedMovie[0]?.Stills[2]}
                   width="100%"
                 />
               </div>

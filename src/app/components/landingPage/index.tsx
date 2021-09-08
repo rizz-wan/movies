@@ -2,13 +2,7 @@ import * as React from "react";
 import data from "../../utils/movies.json";
 import { IMovie } from "../../models/movie";
 import { getShadows } from "../../styles/commonStyles";
-import {
-  getTheme,
-  Rating,
-  RatingSize,
-  Stack,
-  Text,
-} from "@fluentui/react";
+import { getTheme, Rating, RatingSize, Stack, Text } from "@fluentui/react";
 import "./index.scss";
 import { Link } from "react-router-dom";
 
@@ -32,9 +26,9 @@ export class LandingPage extends React.Component {
     return (
       <div className="landingPage">
         <Stack horizontal wrap>
-          {this.movieData.map((movieData) => {
+          {this.movieData.map((movieData, index) => {
             return (
-              <div className="ms-Grid-col ms-sm12 ms-lg6 ms-xl4">
+              <div className="ms-Grid-col ms-sm12 ms-lg6 ms-xl4" key={index}>
                 <div className={`card ${getShadows(theme)}`}>
                   <img alt="poster" src={movieData.Poster} width="100%" />
                   <Text>{this.getListingType(movieData.listingType)}</Text>

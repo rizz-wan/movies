@@ -36,7 +36,7 @@ export class Footer extends React.Component<{}, IFooterState> {
     return (
       <Text className={footerStyles} onClick={this.onFooterClick}>
         with &hearts; from{" "}
-        <Link href="https://github.com/rizz-wan/" target="_blank">
+        <Link href="https://irizwan.com/" target="_blank">
           Rizwan
         </Link>
       </Text>
