@@ -1,6 +1,8 @@
-import { mergeStyles } from "@fluentui/react";
+import { ITheme, mergeStyles } from "@fluentui/react";
 
-export const barStyles = mergeStyles({
+export const barStyles = (theme: ITheme): string => {
+  return mergeStyles({
     height: "50px",
-    backgroundColor: "black",
+    backgroundColor: theme.palette.neutralSecondary,
   });
+};

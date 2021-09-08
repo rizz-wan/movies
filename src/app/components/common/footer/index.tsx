@@ -1,6 +1,6 @@
-import { Link, mergeStyles, Stack, Text } from "@fluentui/react";
+import { getTheme, Link, mergeStyles, Stack, Text } from "@fluentui/react";
 import * as React from "react";
-import {barStyles} from "../style";
+import { barStyles } from "../style";
 
 interface IFooterState {
   isExpanded: boolean;
@@ -44,12 +44,13 @@ export class Footer extends React.Component<{}, IFooterState> {
   };
 
   render(): JSX.Element {
+    const theme = getTheme();
     return (
       <>
         <Stack>
           <Stack.Item align="center">{this.getFooterContent()}</Stack.Item>
         </Stack>
-        <div className={barStyles}></div>
+        <div className={barStyles(theme)}></div>
       </>
     );
   }
