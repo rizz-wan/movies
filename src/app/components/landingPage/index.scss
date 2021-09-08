@@ -1,3 +1,10 @@
-.landingPage{
-    margin-top: 16px;
+.landingPage {
+  margin-top: 16px;
+  h3 {
+    margin: 0;
+    margin-top: 8px;
+  }
+  .movieTitle {
+    min-height: 2rem;
+  }
 }
