@@ -2,6 +2,7 @@ import "./app.scss";
 import { Helmet } from "react-helmet";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { LandingPage } from "./app/components/landingPage";
+import { DetailedView } from "./app/components/detailedView";
 import { Header, Footer } from "./app/components/common";
 import { initializeIcons, loadTheme, ThemeProvider } from "@fluentui/react";
 import { useState } from "react";
@@ -27,6 +28,12 @@ function App(): JSX.Element {
         <div className="container">
           <BrowserRouter>
             <Switch>
+              <Route
+                path="/detail/"
+                render={(): JSX.Element => {
+                  return <DetailedView />;
+                }}
+              />
               <Route
                 path="/"
                 render={(): JSX.Element => {

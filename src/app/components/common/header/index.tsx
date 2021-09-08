@@ -3,11 +3,11 @@ import * as React from "react";
 import { barStyles } from "../style";
 import "./index.scss";
 
-interface IHeaderState {
+interface IHeaderProps {
   onThemeChange: () => void;
 }
 
-export class Header extends React.Component<IHeaderState> {
+export class Header extends React.Component<IHeaderProps> {
   onChange = (
     event: React.MouseEvent<HTMLElement>,
     checked?: boolean
