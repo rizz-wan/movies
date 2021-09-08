@@ -24,16 +24,18 @@ function App(): JSX.Element {
       <div className="App">
         <Helmet defaultTitle="moVies" titleTemplate="%s - moVies"></Helmet>
         <Header onThemeChange={onThemeChange} />
-        <BrowserRouter>
-          <Switch>
-            <Route
-              path="/"
-              render={(): JSX.Element => {
-                return <LandingPage />;
-              }}
-            />
-          </Switch>
-        </BrowserRouter>
+        <div className="container">
+          <BrowserRouter>
+            <Switch>
+              <Route
+                path="/"
+                render={(): JSX.Element => {
+                  return <LandingPage />;
+                }}
+              />
+            </Switch>
+          </BrowserRouter>
+        </div>
         <Footer />
       </div>
     </ThemeProvider>
